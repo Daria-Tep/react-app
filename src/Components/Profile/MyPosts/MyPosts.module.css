@@ -1,0 +1,38 @@
+.myPosts {
+  width: 90%;
+  height: min-content;
+  padding-top: 30px;
+}
+
+.addPostWrapper {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.addPostWrapper textarea {
+  width: 500px;
+  height: 90px;
+}
+
+.textarea {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.addPostWrapper button{
+  display: block;
+  width: 150px;
+  height: 40px;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.posts {
+  padding-top: 20px;
+}

@@ -1,0 +1,48 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+
+.App {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas: "h h" "n p";
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: 60px 1fr;
+  row-gap: 20px;
+  column-gap: 50px;
+  
+}
+
+.app-wrapper-content {
+    grid-area: p;
+    height: min-content;
+    
+}
+
+
+
+
+

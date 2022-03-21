@@ -1,0 +1,48 @@
+.nav {
+    grid-area: n;
+      height: min-content;
+    position: relative;
+     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .wrapper  {
+    width: 80%;
+    max-width: 400px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid #7d0c99;
+    border-radius: 30px;
+  }
+  
+  .navList {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 60%;
+      max-width: 400px;
+      height: 200px;
+      padding-top: 50px;
+      padding-bottom: 50px;     
+  }
+
+  
+
+  .item {
+      color: #000000;
+  }
+
+.settings {
+  align-self: flex-end;
+}
+ 
+ .active {
+      font-weight: 600;
+      color: rgb(114, 8, 128);
+  }

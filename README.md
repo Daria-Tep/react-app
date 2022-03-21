@@ -1,2 +1,2 @@
-# react-app
-My first React app. Social network
+# React app
+My first project. Social network

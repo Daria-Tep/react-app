@@ -1,0 +1,19 @@
+.friends {
+    position: relative;
+    width: 90%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}

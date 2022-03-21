@@ -1,0 +1,36 @@
+.wrapper {
+    width: 300px;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d19a5c;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.avatar {
+    min-width: 35px;
+    min-height: 35px;
+    background-color: rgb(173, 89, 159);
+    border-radius: 50%;
+}
+
+ .right {
+    min-width: 300px;
+    width: min-content;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d19a5c;
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.message {
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -1,0 +1,11 @@
+.avatarDescription {
+  width: 40%;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid green;
+  margin-top: 30px;
+}
+
+  
