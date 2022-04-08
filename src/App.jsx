@@ -11,7 +11,7 @@ import Settings from './Components/Settings/Settings';
 
 
 function App(props) {
- 
+
   return (
     <div className='App'>
       <Header />
@@ -19,9 +19,9 @@ function App(props) {
 
       <div className='app-wrapper-content'>
        <Routes>
-         <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost} />}></Route>
-         <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage}  />}></Route>
-         <Route path='/music'   element={<Music />}></Route>
+         <Route path='/profile' element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />}></Route>
+         <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />}></Route> 
+         <Route path='/music/*'   element={<Music music={props.state.music} />}></Route>
          <Route path='/news'    element={<News />}></Route>
          <Route path='/settings' element={<Settings />}></Route>
        </Routes> 
