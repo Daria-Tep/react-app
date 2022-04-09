@@ -6,16 +6,18 @@ import styles from './Music.module.css';
 
 const Music = (props) => {
 
+  let stateAllmusic = props.state.allMusic;
+
     return (
         <div className={styles.music}>
           <div className={styles.menu}>
-             <NavLink to='/music/allMusic' className={ navData => navData.isActive ? styles.active : styles.itemMenu }>All music</NavLink>
-             <NavLink to='/music/myMusic' className={ navData => navData.isActive ? styles.active : styles.itemMenu }>My music</NavLink>
+             <NavLink to='/music/allmusic' className={ navData => navData.isActive ? styles.active : styles.itemMenu }>All music</NavLink>
+             <NavLink to='/music/mymusic' className={ navData => navData.isActive ? styles.active : styles.itemMenu }>My music</NavLink>
           </div>
 
           <div className={styles.wrapper}>
             <Routes>
-              <Route path='/allmusic' element={<AllMusic music={props.music} />}></Route>
+              <Route path='/allmusic' element={<AllMusic state={ stateAllmusic } />}></Route>
             </Routes>
           </div>
          

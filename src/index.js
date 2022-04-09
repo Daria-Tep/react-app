@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import store from './Redux/Store';
+import store from './Redux/redux-store';
 
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(
       <React.StrictMode>
         <BrowserRouter>
-          <App state ={ store.getState() }  dispatch={store.dispatch.bind(store)} />
+          <App state ={ state } store={ store } dispatch={store.dispatch.bind(store)} />
         </BrowserRouter>  
       </React.StrictMode>,
       document.getElementById('root')
@@ -21,7 +21,10 @@ let rerenderEntireTree = (state) => {
 
   rerenderEntireTree(store.getState());
   
-  store.subscribe(rerenderEntireTree); //вызов импортированной из стейта, передаем здешнюю функцию, чтоб вызвать там
+  store.subscribe(() => {
+   let state = store.getState();
+    rerenderEntireTree(state);
+  }); //вызов импортированной из стейта, передаем здешнюю функцию, чтоб вызвать там
 
  
  

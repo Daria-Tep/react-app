@@ -6,20 +6,18 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-  let postsElements = props.postsData.map((post) => (
+  let postsElements = props.state.postsData.map((post) => (
     <Post message={post.message} likesCount={post.likesCount} />
   ));
 
 
- let addPost = () => { 
-   props.dispatch(addPostCreator());
-   props.dispatch( updateNewPostTextCreator('') )
-   
+ let onAddPost = () => { 
+   props.addPost();
 }
  
 let changeTextPost = (event) => {
   let text = event.target.value;
-  props.dispatch(updateNewPostTextCreator(text))
+  props.updateTextPost(text)
 }
 
 
@@ -29,10 +27,10 @@ let changeTextPost = (event) => {
       <div className={styles.addPostWrapper}>
         
         <div className={styles.textarea}>
-          <textarea onChange={changeTextPost} value={props.newPostText} />
+          <textarea onChange={changeTextPost} value={props.state.newPostText} />
         </div>
 
-        <button onClick={ addPost }>add post</button>
+        <button onClick={ onAddPost }>add post</button>
       </div>
 
       <div className={styles.posts}>
