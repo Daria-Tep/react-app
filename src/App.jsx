@@ -15,13 +15,13 @@ function App(props) {
   return (
     <div className='App'>
       <Header />
-      <Navbar state={props.state.sidebar} />
+      <Navbar />
 
       <div className='app-wrapper-content'>
        <Routes>
-         <Route path='/profile' element={<Profile store={props.store} />}></Route>
-         <Route path='/dialogs/*' element={<DialogsContainer store={props.store} />}></Route> 
-         <Route path='/music/*'   element={<MusicContainer store={props.store} />}></Route>
+         <Route path='/profile' element={<Profile />}></Route>
+         <Route path='/dialogs/*' element={<DialogsContainer  />}></Route> 
+         <Route path='/music/*'   element={<MusicContainer />}></Route>
          <Route path='/news'    element={<News />}></Route>
          <Route path='/settings' element={<Settings />}></Route>
        </Routes> 

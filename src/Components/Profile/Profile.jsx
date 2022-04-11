@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Banner from './Banner/Banner';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
 import styles from './Profile.module.css';
@@ -12,7 +11,7 @@ const Profile = (props) => {
         <div className={styles.profile}>
             <Banner />
             <ProfileInfo />
-            <MyPostsContainer store={props.store} />
+            <MyPostsContainer />
         </div>
     ) 
 }
